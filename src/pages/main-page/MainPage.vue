@@ -1,0 +1,424 @@
+<template>
+  <base-dialog :show="isLoading" title="Processing..." fixed>
+    <base-spinner></base-spinner>
+  </base-dialog>
+  <div class="hide">
+    <svg
+      version="1.1"
+      id="timers"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      viewBox="0 0 462.934 462.934"
+      style="enable-background: new 0 0 462.934 462.934"
+      xml:space="preserve"
+    >
+      <g>
+        <path
+          d="M455.709,238.691c0-56.516-21.091-110.501-59.387-152.013c-36.952-40.054-86.704-65.116-140.554-70.923
+		c-1.088-2.43-2.537-4.711-4.334-6.747C246.38,3.283,239.103,0,231.467,0c-7.636,0-14.913,3.283-19.966,9.007
+		c-5.053,5.725-7.408,13.353-6.461,20.93l10.867,86.937c0.977,7.823,7.659,13.722,15.579,13.722c7.884,0,14.566-5.899,15.543-13.722
+		l0,0l10.722-85.778c48.855,6.124,93.889,29.269,127.547,65.753c34.035,36.892,53.491,84.347,55.265,134.342h-28.477
+		c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h28.475c-3.876,109.424-92.169,197.717-201.593,201.593V419.31
+		c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v28.474C114.542,443.908,26.25,355.616,22.374,246.191h28.475
+		c4.142,0,7.5-3.358,7.5-7.5s-3.358-7.5-7.5-7.5H22.371c0.922-26.455,6.713-52.07,17.282-76.243
+		c11.173-25.555,27.116-48.32,47.386-67.661c2.997-2.86,3.108-7.607,0.249-10.604c-2.86-2.996-7.606-3.108-10.604-0.249
+		c-21.717,20.723-38.8,45.117-50.774,72.505c-12.398,28.357-18.685,58.554-18.685,89.751c0,59.897,23.325,116.209,65.679,158.563
+		c42.351,42.351,98.658,65.675,158.55,65.679c0.004,0,0.008,0.001,0.013,0.001s0.009-0.001,0.013-0.001
+		c59.893-0.003,116.2-23.328,158.551-65.679C432.384,354.9,455.709,298.588,455.709,238.691z M243.01,28.077l-10.867,86.938l0,0
+		c-0.041,0.332-0.324,0.581-0.694,0.581c-0.334,0-0.617-0.25-0.659-0.582l-10.867-86.938c-0.42-3.358,0.583-6.605,2.822-9.142
+		S228.082,15,231.467,15c3.384,0,6.481,1.397,8.721,3.935S243.43,24.718,243.01,28.077z"
+        />
+        <path
+          d="M195.198,235.739c-0.079,0.975-0.13,1.958-0.13,2.953c0,20.07,16.328,36.399,36.398,36.399s36.399-16.329,36.399-36.399
+		s-16.329-36.399-36.399-36.399c-0.132,0-0.261,0.009-0.393,0.01l-103.21-84.996c-2.911-2.396-7.15-2.26-9.9,0.321
+		c-2.75,2.581-3.156,6.803-0.948,9.86L195.198,235.739z M252.865,238.691c0,11.799-9.6,21.399-21.399,21.399
+		s-21.398-9.6-21.398-21.399c0-0.98,0.089-1.937,0.217-2.882c0.143-0.519,0.231-1.052,0.26-1.59
+		c1.847-8.647,8.934-15.354,17.764-16.668c0.742,0.039,1.485-0.032,2.207-0.211c0.317-0.014,0.629-0.048,0.949-0.048
+		C243.266,217.292,252.865,226.892,252.865,238.691z M213.353,207.14c-4.857,2.8-9.014,6.681-12.129,11.322l-37.981-52.589
+		L213.353,207.14z"
+        />
+      </g>
+    </svg>
+
+    <svg
+      version="1.1"
+      id="control-panel"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      viewBox="0 0 512.002 512.002"
+      style="enable-background: new 0 0 512.002 512.002"
+      xml:space="preserve"
+    >
+      <g>
+        <g>
+          <g>
+            <polygon
+              points="424.571,227.41 439.684,225.737 425.025,93.325 338.557,93.325 338.557,108.531 411.41,108.531 			"
+            />
+            <path
+              d="M276.36,376.94v88.589h235.641V376.94H487.02v0.001L452.253,62.915h-29.623V14.73h-91.669v48.185h-30.419v107.474
+				h-89.088V62.915h-30.419V14.73H89.37v48.185H59.746L24.98,376.941H0v88.589h235.641v-88.589h-24.185v-92.27h89.088v92.269H276.36
+				z M346.167,29.936h61.258v32.979h-61.258V29.936z M104.575,29.936h61.258v32.979h-61.258V29.936z M220.436,392.147v58.178H15.205
+				v-58.178h23.39h103.872v-15.205H40.278L73.36,78.12h16.008h91.669h15.213v92.269h-41.404c-24.608,0-44.628,20.02-44.628,44.628
+				v25.025c0,24.608,20.02,44.628,44.628,44.628h41.404v92.271h-33.509v15.205h33.51H220.436z M211.457,269.466h-56.609
+				c-16.224,0-29.423-13.199-29.423-29.423v-25.025c0-16.224,13.199-29.423,29.423-29.423h56.609h89.088h56.609
+				c16.224,0,29.423,13.199,29.423,29.423v25.025c0,16.224-13.199,29.423-29.423,29.423h-56.609H211.457z M315.749,392.147h33.51
+				v-15.205h-33.51v-92.27h41.404c24.608,0,44.628-20.02,44.628-44.628v-25.025c0-24.608-20.02-44.628-44.628-44.628h-41.404V78.12
+				h15.213h91.669h16.008l33.083,298.82h-102.19v15.205h103.872h23.39v58.179h-205.23v-58.178H315.749z"
+            />
+            <rect y="482.066" width="235.641" height="15.205" />
+            <rect x="276.361" y="482.066" width="235.641" height="15.205" />
+            <path
+              d="M167.358,203.27c-13.378,0-24.262,10.883-24.262,24.262c0,13.379,10.883,24.262,24.262,24.262
+				s24.262-10.883,24.262-24.262C191.62,214.153,180.736,203.27,167.358,203.27z M167.358,236.586c-4.993,0-9.056-4.063-9.056-9.056
+				s4.063-9.056,9.056-9.056s9.056,4.063,9.056,9.056S172.352,236.586,167.358,236.586z"
+            />
+            <path
+              d="M344.642,251.792c13.378,0,24.262-10.883,24.262-24.262s-10.883-24.262-24.262-24.262s-24.262,10.883-24.262,24.262
+				S331.264,251.792,344.642,251.792z M344.642,218.475c4.993,0,9.056,4.063,9.056,9.056c0,4.993-4.063,9.056-9.056,9.056
+				s-9.056-4.063-9.056-9.056C335.585,222.538,339.647,218.475,344.642,218.475z"
+            />
+            <polygon
+              points="173.445,93.325 86.977,93.325 72.317,225.737 87.43,227.41 100.592,108.531 173.445,108.531 			"
+            />
+          </g>
+        </g>
+      </g>
+    </svg>
+
+    <svg
+      version="1.1"
+      id="statistics"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      viewBox="0 0 256 256"
+      enable-background="new 0 0 256 256"
+      xml:space="preserve"
+    >
+      <path
+        d="M192.498,124.8c9.278,0,16.8,7.522,16.8,16.8s-7.522,16.8-16.8,16.8s-16.8-7.522-16.8-16.8S183.22,124.8,192.498,124.8z
+	 M171.798,166.6c9.278,0,16.8,7.522,16.8,16.8s-7.522,16.8-16.8,16.8s-16.8-7.522-16.8-16.8S162.52,166.6,171.798,166.6z
+	 M144.998,203.3h-18.9h-18.9c-11.5,0-18.7,9.5-18.7,21.4V254h12.9v-25.9c0-1.2,1-2,2-2c1.2,0,2,0.8,2,2v25.8h41.5v-25.8
+	c0-1.2,1-2,2-2c1.2,0,2,1,2,2v25.8h12.9v-29.1C163.998,212.8,156.698,203.3,144.998,203.3z M149.698,124.8
+	c9.278,0,16.8,7.522,16.8,16.8s-7.522,16.8-16.8,16.8s-16.8-7.522-16.8-16.8S140.42,124.8,149.698,124.8z M199.098,183.4
+	c0,9.3,7.5,16.8,16.8,16.8s16.8-7.5,16.8-16.8s-7.5-16.8-16.8-16.8S199.098,174.1,199.098,183.4z M197.398,203.3
+	c-11.5,0-18.7,9.5-18.7,21.4V254h12.9v-25.9c0-1.2,1-2,2-2c1.2,0,2,0.8,2,2v25.8h41.5v-25.8c0-1.2,1-2,2-2c1.2,0,2,1,2,2v25.8h12.9
+	v-29.1c0.2-12.1-7.1-21.6-18.7-21.6h-18.9h-19V203.3z M39.798,166.6c9.278,0,16.8,7.522,16.8,16.8s-7.522,16.8-16.8,16.8
+	s-16.8-7.522-16.8-16.8S30.52,166.6,39.798,166.6z M14.798,253.9v-25.8c0-1.2,1-2,2-2c1.2,0,2,0.8,2,2v25.8h41.5v-25.8
+	c0-1.2,1-2,2-2c1.2,0,2,1,2,2v25.8h12.9v-29.1c0.2-12.1-7.1-21.6-18.7-21.6h-18.9h-18.9c-11.5,0-18.7,9.5-18.7,21.4v29.3
+	L14.798,253.9L14.798,253.9z M109.298,183.4c0,9.3,7.5,16.8,16.8,16.8c9.3,0,16.8-7.5,16.8-16.8s-7.5-16.8-16.8-16.8
+	S109.298,174.1,109.298,183.4z M61.298,124.8c9.278,0,16.8,7.522,16.8,16.8s-7.522,16.8-16.8,16.8s-16.8-7.522-16.8-16.8
+	S52.02,124.8,61.298,124.8z M106.698,124.8c9.278,0,16.8,7.522,16.8,16.8s-7.522,16.8-16.8,16.8s-16.8-7.522-16.8-16.8
+	S97.42,124.8,106.698,124.8z M84.098,166.6c9.278,0,16.8,7.522,16.8,16.8s-7.522,16.8-16.8,16.8s-16.8-7.522-16.8-16.8
+	S74.82,166.6,84.098,166.6z M173.352,93.441V9.166h-16.96v84.275h-5.685V27.798h-16.96v65.643h-5.733V59.855h-16.96v33.586h-5.685
+	V76.338h-16.96v17.103h-9.603V2h-6.43v98h111.248v-6.43v-0.129H173.352z"
+      />
+    </svg>
+
+    <svg
+      viewBox="0 0 52 52"
+      data-name="Layer 1"
+      id="settings"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M38.3,27.2A11.4,11.4,0,1,0,49.7,38.6,11.46,11.46,0,0,0,38.3,27.2Zm2,12.4a2.39,2.39,0,0,1-.9-.2l-4.3,4.3a1.39,1.39,0,0,1-.9.4,1,1,0,0,1-.9-.4,1.39,1.39,0,0,1,0-1.9l4.3-4.3a2.92,2.92,0,0,1-.2-.9,3.47,3.47,0,0,1,3.4-3.8,2.39,2.39,0,0,1,.9.2c.2,0,.2.2.1.3l-2,1.9a.28.28,0,0,0,0,.5L41.1,37a.38.38,0,0,0,.6,0l1.9-1.9c.1-.1.4-.1.4.1a3.71,3.71,0,0,1,.2.9A3.57,3.57,0,0,1,40.3,39.6Z"
+      />
+      <circle cx="21.7" cy="14.9" r="12.9" />
+      <path
+        d="M25.2,49.8c2.2,0,1-1.5,1-1.5h0a15.44,15.44,0,0,1-3.4-9.7,15,15,0,0,1,1.4-6.4.77.77,0,0,1,.2-.3c.7-1.4-.7-1.5-.7-1.5h0a12.1,12.1,0,0,0-1.9-.1A19.69,19.69,0,0,0,2.4,47.1c0,1,.3,2.8,3.4,2.8H24.9C25.1,49.8,25.1,49.8,25.2,49.8Z"
+      />
+    </svg>
+
+    <svg
+      version="1.1"
+      id="main-page"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      viewBox="0 0 330.242 330.242"
+      style="enable-background: new 0 0 330.242 330.242"
+      xml:space="preserve"
+    >
+      <path
+        d="M324.442,129.811l-41.321-33.677V42.275c0-6.065-4.935-11-11-11h-26c-6.065,0-11,4.935-11,11v14.737l-55.213-44.999
+	c-3.994-3.254-9.258-5.047-14.822-5.047c-5.542,0-10.781,1.782-14.753,5.019L5.8,129.81c-6.567,5.351-6.173,10.012-5.354,12.314
+	c0.817,2.297,3.448,6.151,11.884,6.151h19.791v154.947c0,11.058,8.972,20.053,20,20.053h62.5c10.935,0,19.5-8.809,19.5-20.053
+	v-63.541c0-5.446,5.005-10.405,10.5-10.405h42c5.238,0,9.5,4.668,9.5,10.405v63.541c0,10.87,9.388,20.053,20.5,20.053h61.5
+	c11.028,0,20-8.996,20-20.053V148.275h19.791c8.436,0,11.066-3.854,11.884-6.151C330.615,139.822,331.009,135.161,324.442,129.811z"
+      />
+    </svg>
+
+    <svg
+      version="1.1"
+      id="logout"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      viewBox="0 0 490.3 490.3"
+      style="enable-background: new 0 0 490.3 490.3"
+      xml:space="preserve"
+    >
+      <g>
+        <g>
+          <path
+            d="M0,121.05v248.2c0,34.2,27.9,62.1,62.1,62.1h200.6c34.2,0,62.1-27.9,62.1-62.1v-40.2c0-6.8-5.5-12.3-12.3-12.3
+			s-12.3,5.5-12.3,12.3v40.2c0,20.7-16.9,37.6-37.6,37.6H62.1c-20.7,0-37.6-16.9-37.6-37.6v-248.2c0-20.7,16.9-37.6,37.6-37.6h200.6
+			c20.7,0,37.6,16.9,37.6,37.6v40.2c0,6.8,5.5,12.3,12.3,12.3s12.3-5.5,12.3-12.3v-40.2c0-34.2-27.9-62.1-62.1-62.1H62.1
+			C27.9,58.95,0,86.75,0,121.05z"
+          />
+          <path
+            d="M385.4,337.65c2.4,2.4,5.5,3.6,8.7,3.6s6.3-1.2,8.7-3.6l83.9-83.9c4.8-4.8,4.8-12.5,0-17.3l-83.9-83.9
+			c-4.8-4.8-12.5-4.8-17.3,0s-4.8,12.5,0,17.3l63,63H218.6c-6.8,0-12.3,5.5-12.3,12.3c0,6.8,5.5,12.3,12.3,12.3h229.8l-63,63
+			C380.6,325.15,380.6,332.95,385.4,337.65z"
+          />
+        </g>
+      </g>
+    </svg>
+  </div>
+  <header class="main-head">
+    <nav class="head-nav">
+      <ul class="menu">
+        <li>
+          <router-link :to="{ name: 'UserActions' }">
+            <svg class="person">
+              <use xlink:href="#main-page"></use></svg
+            ><span>Home</span>
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'Timers' }">
+            <svg class="person">
+              <use xlink:href="#timers"></use></svg
+            ><span>Timers</span>
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'Watchers' }">
+            <svg class="person">
+              <use xlink:href="#control-panel"></use></svg
+            ><span>Control panel</span>
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'Timers' }">
+            <svg class="person">
+              <use xlink:href="#statistics"></use></svg
+            ><span>Statistics</span>
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'Management' }">
+            <svg class="person">
+              <use xlink:href="#settings"></use></svg
+            ><span>Users settings</span>
+          </router-link>
+        </li>
+        <li v-if="isLoggedIn">
+          <div class="li-item" @click="logout()">
+            <svg class="person">
+              <use xlink:href="#logout"></use></svg
+            ><span>Logout</span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="wrap-all-the-things">
+    <router-view></router-view>
+  </div>
+</template>
+<script lang="ts">
+import { defineComponent } from "vue";
+import TokenService from "../../services/token.service";
+export default defineComponent({
+  data() {
+    return {
+      isLoading: false,
+      isLoggedIn: TokenService.getLocalAccessToken(),
+    };
+  },
+  methods: {
+    async logout() {
+      this.isLoading = true;
+      try {
+        await this.$store.dispatch("auth/logout");
+        this.$router.replace({ name: "AuthPage" });
+      } catch (err: any) {
+        this.isLoading = false;
+      }
+
+      this.isLoading = false;
+    },
+  },
+});
+</script>
+<style scoped>
+.hide {
+  display: none;
+}
+
+.head-nav li:hover {
+  background-color: #fbeaeb;
+}
+.head-nav li:hover:before {
+  background-color: #959998;
+}
+
+.li-item {
+  cursor: pointer;
+}
+
+.head-nav li:hover a,
+.head-nav li:hover .li-item {
+  color: black;
+}
+.head-nav li:hover svg {
+  fill: black;
+}
+.head-nav li:before {
+  position: absolute;
+  left: -0.925rem;
+  top: 0;
+  width: 0.925rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+  transition: background 400ms;
+}
+.head-nav ul {
+  margin-top: 1.85rem;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding: 0;
+  list-style: none;
+}
+.head-nav li {
+  position: relative;
+  clear: both;
+  width: 100%;
+  padding: 0;
+  font-size: 20px;
+  transition: background 400ms;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: "Share Tech Mono", monospace;
+}
+.head-nav li a,
+.head-nav li .li-item {
+  display: flex;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+.head-nav a,
+.head-nav .li-item {
+  align-items: center;
+  width: 100%;
+  color: #fefefe;
+  text-decoration: none;
+  transition: color 400ms;
+}
+.head-nav a span,
+.head-nav .li-item span {
+  position: relative;
+  display: block;
+  z-index: 0;
+  text-indent: -20em;
+  white-space: nowrap;
+  font-size: 20px;
+  transition: text-indent 400ms ease-in-out;
+}
+.head-nav svg {
+  position: relative;
+  max-width: 80px;
+  max-height: 30px;
+  z-index: 1;
+  fill: #fff;
+  transition: 400ms;
+}
+@media screen and (max: 768px) {
+  .head-nav ul {
+    margin-top: 0.23125rem;
+  }
+  .head-nav svg {
+    max-width: 20px;
+  }
+}
+
+.main-head {
+  position: fixed;
+  bottom: 0;
+  width: 83px;
+  height: 100%;
+  z-index: 1;
+  background: #2f3c7e;
+  transition: width 400ms;
+}
+.main-head:hover {
+  width: 350px;
+}
+.main-head:hover + .wrap-all-the-things {
+  transform: translateX(336px);
+  max-width: 100%;
+  opacity: 0.4;
+}
+.main-head:hover .head-nav li:nth-of-type(1) span {
+  transition-delay: 100ms;
+}
+.main-head:hover .head-nav li:nth-of-type(2) span {
+  transition-delay: 200ms;
+}
+.main-head:hover .head-nav li:nth-of-type(3) span {
+  transition-delay: 300ms;
+}
+.main-head:hover .head-nav li:nth-of-type(4) span {
+  transition-delay: 400ms;
+}
+.main-head:hover .head-nav li:nth-of-type(5) span {
+  transition-delay: 500ms;
+}
+.main-head:hover .head-nav li:nth-of-type(6) .li-item span {
+  transition-delay: 500ms;
+}
+.main-head:hover .head-nav span,
+.main-head:hover .head-nav .li-item span {
+  text-indent: 0;
+}
+@media screen and (max: 768px) {
+  .main-head {
+    width: 70px;
+    padding: 0 0.925rem;
+  }
+  .main-head .head-nav {
+    padding-left: 7px;
+  }
+  .main-head:hover .head-nav span,
+  .main-head:hover .head-nav .li-item span {
+    text-indent: 1em;
+  }
+}
+
+.wrap-all-the-things {
+  min-height: 100%;
+  height: 100vh;
+  padding: 20px 0px 0px 84px;
+  margin-top: 0;
+  background-size: cover;
+  background-position: center center;
+  transition: transform 400ms, opacity 400ms;
+}
+@media screen and (max: 480px) {
+  .wrap-all-the-things {
+    padding-left: 70px;
+  }
+}
+</style>
